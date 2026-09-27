@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    int marks,chem;
+    int phy,math;
+    marks=chem+phy+math;
+    printf("Enter you marks per subject student");
+    printf("\nmaths:");
+    scanf("%d",&math);
+    printf("\nchemistry:");
+    scanf("%d",&chem);
+    printf("\nphysics:");
+    scanf("%d",&phy);
+    if(phy>=25){
+        printf("\nYOU HAVE PASSED IN PHYSICS");
+    }
+    else 
+    {
+        printf("\nYOU HAVE FAILED PHYSICS");
+    }
+    if(chem>=25)
+    {
+        printf("'\nYOU HAVE PASSED CHEMISTRY");
+    }
+    else
+    {
+        printf("\nYOU HAVE FAILED CHEMISTRY");
+    }
+    if(math>=50)
+    {
+        printf("\nYOU HAVE PASSED MATHS");
+    }
+    else
+    {
+        printf("\nYOU HAVE FAILED MATHS");
+    }
+    if(marks>=100)
+    {
+        printf("\nOVERALL YOU HAVE PASSED THE TEST");
+    }
+    else
+    {
+      printf("\nOVERALL YOU HAVE FAILED TE TEST");
+    }
+     return 0;
+}
