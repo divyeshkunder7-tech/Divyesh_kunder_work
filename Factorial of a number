@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+  int mult=1,i,n;
+  printf("\nEnter you number");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    mult*=i;
+  }
+  printf("\nFactorial of number is:%d",mult);
+  return 0;
+}
