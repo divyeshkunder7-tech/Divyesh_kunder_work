@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <string.h>
+
+int parse(char s[]) {
+    s[strcspn(s, "\n")] = 0;
+
+    if (strcmp(s, "go") == 0) {
+        return 1;
+    } else if (strcmp(s, "back") == 0) {
+        return 2;
+    } else if (strcmp(s, "left") == 0) {
+        return 3;
+    } else if (strcmp(s, "right") == 0) {
+        return 4;
+    } else if (strcmp(s, "stop") == 0) {
+        return 5;
+    } else {
+        return 0;
+    }
+}
+
+
+int run(int c) {
+    switch (c) {
+        case 1:
+            printf("Output: GO\n");
+            break;
+        case 2:
+            printf("Output: BACK\n");
+            break;
+        case 3:
+            printf("Output: LEFT\n");
+            break;
+        case 4:
+            printf("Output: RIGHT\n");
+            break;
+        case 5:
+            printf("Output: STOP\n");
+            break;
+        default:
+            printf("Output: INVALID\n");
+            break;
+    }
+    return 0;
+}
+
+int main() {
+    char cmd[20];
+
+    printf("Enter command (go, back, left, right, stop): ");
+    fgets(cmd, sizeof(cmd), stdin);
+
+    int code = parse(cmd);
+    run(code);
+
+    return 0;
+}
